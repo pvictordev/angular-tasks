@@ -9,4 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  count: number = 0;
+
+  increment(): void {
+    this.count = this.count + 1;
+  }
 }
