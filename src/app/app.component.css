@@ -1,0 +1,14 @@
+.task-5 {
+    border: 3px solid black;
+    padding: 20px;
+    margin: 20px;
+
+    h1 {
+        text-align: center;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}

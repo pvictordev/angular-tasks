@@ -1,0 +1,11 @@
+<div class="task-5">
+  <h1>Task 5</h1>
+
+  <div class="card-container">
+    @if(employees) {
+      @for(employee of employees; track $index) {
+        <app-card [data]="employee"></app-card>
+      }
+    }
+  </div>
+</div>
