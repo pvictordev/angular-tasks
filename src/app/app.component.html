@@ -1,0 +1,16 @@
+<div class="task-3">
+  <h1>Task 3</h1>
+
+  <div class="input-toggle">
+    <input 
+      [ngModel]="name" 
+      (input)="updateName(inputText.value)"  
+      type="text" placeholder="name" 
+      [disabled]="isDisabled" 
+      #inputText type="text"
+    />
+    <button (click)="inputToggle()"> {{ isDisabled ? "Disabled" : "Enabled" }} </button>
+  </div>
+ 
+  <h2>Greetings, {{ name }} </h2>
+</div>

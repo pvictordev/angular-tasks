@@ -1,0 +1,35 @@
+.task-3 {
+    border: 3px solid black;
+    padding: 20px;
+    margin: 20px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .input-toggle {
+
+        display: flex;
+        gap: 5px;
+
+        input {
+            padding: 10px;
+            border-radius: 15px 0px 0px 15px;
+        }
+        
+        button {
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 0px 15px 15px 0px;
+            transition: all 0.1s;
+        }
+        button:hover {
+            background-color: rgb(96, 30, 158);
+        }
+        
+    }
+   
+}
