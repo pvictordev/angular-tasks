@@ -1,0 +1,19 @@
+<div class="task-4">
+
+  <h1>Task 4</h1>
+
+  <div class="list-toggle">
+    <button (click)="listToggle()">
+      {{ isListVisible ? "Showed" : "Hidden" }}
+    </button>
+  
+    @if(isListVisible) {
+      <ol>
+      @for(name of names; track $index) {
+        <li>{{ name }}</li>
+      }
+      </ol>
+    }
+  </div>
+
+</div>

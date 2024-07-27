@@ -9,4 +9,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  names: string[] = ["Elena", "Silviu", "Victor", "Daniel"];
+  isListVisible: boolean = false;
+
+  listToggle(): void {
+    this.isListVisible = !this.isListVisible;
+    this.names = this.names.sort();
+  }
+
 }
