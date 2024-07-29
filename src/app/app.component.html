@@ -1,10 +1,11 @@
 <div class="task-5">
   <h1>Task 5</h1>
+  <h2>Hello, {{ receivedName }} !</h2>
 
   <div class="card-container">
-    @if(employees) {
-      @for(employee of employees; track $index) {
-        <app-card [data]="employee"></app-card>
+    @if(students) {
+      @for(student of students; track $index) {
+        <app-card (addInfoEvent)="onAddInfo($event)" [data]="student"></app-card>
       }
     }
   </div>

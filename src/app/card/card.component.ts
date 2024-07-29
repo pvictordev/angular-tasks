@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Employee } from '../app.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Student } from '../app.component';
 
 @Component({
   selector: 'app-card',
@@ -10,6 +10,11 @@ import { Employee } from '../app.component';
 })
 export class CardComponent {
 
-  @Input() data!: Employee;
+  @Input() data!: Student;
 
+  @Output() addInfoEvent = new EventEmitter<string>();
+
+  addInfo(name: string): void {
+    this.addInfoEvent.emit(name);
+  }
 }

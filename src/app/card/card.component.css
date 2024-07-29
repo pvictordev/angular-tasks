@@ -5,6 +5,20 @@
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(33.333% - 16px);
+    position: relative;
+
+    button {
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        backdrop-filter: blur(10px);
+        background: blue;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+    }
 }
 
 .me {
