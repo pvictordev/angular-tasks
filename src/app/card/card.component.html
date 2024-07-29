@@ -1,0 +1,5 @@
+<div class="card {{ student.name == 'Victor' ? 'me' : '' }}">
+    <h2>{{ student().name }}</h2>
+    <small>{{ student().description }}</small>
+    <button (click)="handleInfoClick(student().name)">Info</button>
+</div>
