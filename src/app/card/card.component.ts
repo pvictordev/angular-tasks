@@ -1,20 +1,21 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Student } from '../app.component';
+import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
+import { Student } from '../student.model';
 
 @Component({
   selector: 'app-card',
   standalone: true,
   imports: [],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrl: './card.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
 
-  @Input() data!: Student;
+  student = input.required<Student>();
 
-  @Output() addInfoEvent = new EventEmitter<string>();
+  nameSelected = output<string>();
 
-  addInfo(name: string): void {
-    this.addInfoEvent.emit(name);
+  handleInfoClick(name: string): void {
+    this.nameSelected.emit(name);
   }
 }

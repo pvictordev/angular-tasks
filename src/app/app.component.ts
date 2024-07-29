@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from './card/card.component';
-
-export interface Student {
-  name: string,
-  description: string
-};
+import { Student } from './student.model';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +19,7 @@ export class AppComponent {
   ];
 
   receivedName!: string;
+
   onAddInfo(name: string): void {
     this.receivedName = name;
   }

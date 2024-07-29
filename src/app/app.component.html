@@ -5,7 +5,7 @@
   <div class="card-container">
     @if(students) {
       @for(student of students; track $index) {
-        <app-card (addInfoEvent)="onAddInfo($event)" [data]="student"></app-card>
+        <app-card (nameSelected)="onAddInfo($event)" [student]="student"></app-card>
       }
     }
   </div>
